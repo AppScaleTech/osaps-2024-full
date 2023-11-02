@@ -20,7 +20,7 @@ const Navbar = () => {
             <li>Abstract</li>
             <Link href={'/sponsorship'}>Sponsors</Link>
             <li>Explore Cebu</li>
-            <li>About</li>
+            <Link href={'/about'}>About</Link>
         </ul>
       </div>
       <button className="text-[#234C81] font-semibold bg-[#FBCE3A] px-5 py-4 rounded-full">Register</button>

@@ -6,8 +6,8 @@ const Sponsorship = () => {
   return (
     <div className="">
       <Banner />
-      <div className="max-w-7xl mx-auto mt-20 px-10  md:px-[104px] lg:px-0">
-        <h2 className="text-[32px] text-[#234C81] font-semibold">
+      <div className="max-w-7xl mx-auto mt-20 px-10">
+        <h2 className="text-2xl lg:text-[32px] text-[#234C81] font-semibold">
           Sponsorship / Exhibition Opportunities
         </h2>
 
@@ -15,7 +15,7 @@ const Sponsorship = () => {
         <div className="mt-10 grid grid-cols-1  lg:grid-cols-2 gap-5 mb-10">
           {/* card 1 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-[32px] font-semibold">Platinum Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">Platinum Package</h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -31,7 +31,7 @@ const Sponsorship = () => {
           </div>
           {/* card 2 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-[32px] font-semibold">Gold Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">Gold Package</h2>
             <p>US $8,000</p>
             <p>inc. GST</p>
             <button className="bg-[#F6C4C7] px-3 py-2 rounded-full">
@@ -48,7 +48,7 @@ const Sponsorship = () => {
 
           {/* card 3 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-[32px] font-semibold">Silver Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">Silver Package</h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -65,7 +65,7 @@ const Sponsorship = () => {
 
           {/* card 4 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-[32px] font-semibold">Exhibition Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">Exhibition Package</h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -82,8 +82,8 @@ const Sponsorship = () => {
         </div>
       </div>
 
-      <div className="bg-[#274c57] pb-20">
-        <h1 className="text-[48px] text-center pt-20 font-semibold text-[#234C81]">
+      <div className="bg-[#C4D9DF] pb-20">
+        <h1 className="text-2xl lg:text-[48px] text-center pt-20 font-semibold text-[#234C81]">
           Why sponsor or exhibit at OSAPS 2024?
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-15 gap-y-5 max-w-7xl mx-auto mt-10">
@@ -140,7 +140,7 @@ const Sponsorship = () => {
       {/* sponsors */}
 
       <div className=" max-w-7xl mx-auto mt-20 mb-20">
-        <h1 className="text-[48px] text-center text-[#234C81] font-semibold">Our Sponsors</h1>
+        <h1 className="text-2xl lg:text-[48px] text-center text-[#234C81] font-semibold">Our Sponsors</h1>
         <div className="flex justify-center">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10">
             <img
