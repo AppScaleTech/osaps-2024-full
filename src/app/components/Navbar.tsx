@@ -19,7 +19,7 @@ const Navbar = () => {
             <li>Speakers</li>
             <li>Abstract</li>
             <Link href={'/sponsorship'}>Sponsors</Link>
-            <li>Explore Cebu</li>
+            <Link href={'/explore-cebu'}>Explore Cebu</Link>
             <Link href={'/about'}>About</Link>
         </ul>
       </div>
