@@ -130,7 +130,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:justify-end">
               <img
                 src="/assets/images/home/img3.png"
                 alt=""
