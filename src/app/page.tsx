@@ -143,7 +143,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto my-20">
+      <div className="max-w-7xl mx-auto my-20 px-5">
         <h1 className="text-center text-2xl lg:text-5xl font-bold text-[#234C81]">
           Why you should attend Harmony in Diversity?
         </h1>
