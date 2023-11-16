@@ -120,9 +120,11 @@ export default function Home() {
                 into the world of aesthetic surgery.
               </p>
               <div className="flex flex-col lg:flex-row my-10 space-y-2 lg:space-y-0 lg:space-x-2">
+                <Link href={'/register'}>
                 <button className="bg-[#FBCE3A] rounded-full px-4 py-2 text-[#234C81]">
                   REGISTER NOW
                 </button>
+                </Link>
                 <Link href={'/explore-cebu'}>
                 <button className="border border-[#FBCE3A] px-4 py-2 rounded-full text-[#FBCE3A]">
                   EXPLORE CEBU
