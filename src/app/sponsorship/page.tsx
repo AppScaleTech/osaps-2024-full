@@ -1,11 +1,27 @@
 import React from "react";
-import Banner from "../components/SponsorShipBanner";
 import Link from "next/link";
 
 const Sponsorship = () => {
   return (
     <div className="">
-      <Banner />
+      <div className="bg-[#F2F1E9] ">
+        <div className="max-w-7xl mx-auto bg-[#F2F1E9] px-10">
+          <h1 className="text-3xl lg:text-5xl text-[#234C81] font-semibold pt-[80px] ">
+            Sponsorship / Exhibition
+          </h1>
+          <p className="leading-loose my-10 text-justify">
+            Pharmaceutical companies, corporations and other service firms are
+            invited to promote their brand by obtaining a specially designed
+            Platinum, Gold and Silver Partnership Package. PAPRAS will
+            collaborate with corporate sponsors to customize distinctive
+            sponsorship opportunities that are aimed to optimize each sponsor's
+            specific marketing, sales and branding objectives.
+          </p>
+          <button className="bg-[#FBCE3A] px-5 py-4 rounded-full mb-[50px] font-semibold">
+            CONTACT US
+          </button>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto mt-20 px-10">
         <h2 className="text-2xl lg:text-[32px] text-[#234C81] font-semibold">
           Sponsorship / Exhibition Opportunities
@@ -15,7 +31,9 @@ const Sponsorship = () => {
         <div className="mt-10 grid grid-cols-1  lg:grid-cols-2 gap-5 mb-10">
           {/* card 1 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-2xl lg:text-[32px] font-semibold">Platinum Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">
+              Platinum Package
+            </h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -31,7 +49,9 @@ const Sponsorship = () => {
           </div>
           {/* card 2 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-2xl lg:text-[32px] font-semibold">Gold Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">
+              Gold Package
+            </h2>
             <p>US $8,000</p>
             <p>inc. GST</p>
             <button className="bg-[#F6C4C7] px-3 py-2 rounded-full">
@@ -48,7 +68,9 @@ const Sponsorship = () => {
 
           {/* card 3 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-2xl lg:text-[32px] font-semibold">Silver Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">
+              Silver Package
+            </h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -65,7 +87,9 @@ const Sponsorship = () => {
 
           {/* card 4 */}
           <div className="text-center space-y-2 border-2 border-[#BCBDC0] rounded-md shadow-md px-5 py-5">
-            <h2 className="text-2xl lg:text-[32px] font-semibold">Exhibition Package</h2>
+            <h2 className="text-2xl lg:text-[32px] font-semibold">
+              Exhibition Package
+            </h2>
             <p>US $11,000</p>
             <p>inc. GST</p>
             <button className="bg-[#C4D9DF] px-3 py-2 rounded-full">
@@ -75,7 +99,10 @@ const Sponsorship = () => {
               Elevate your visibility at OSAPS 2024 with our exclusive Platinum
               Partner package for lasting recognition and strong connections.
             </p>
-            <Link href={"/sponsorship/exhibitionhall"} className="text-[#234C81]">
+            <Link
+              href={"/sponsorship/exhibitionhall"}
+              className="text-[#234C81]"
+            >
               <p className="mt-10 mb-5 font-semibold">More info</p>
             </Link>
           </div>
@@ -110,7 +137,9 @@ const Sponsorship = () => {
               src="/assets/images/earth-outline.png"
               alt=""
             />
-            <p className="font-semibold text-[20px]">Make long-term contracts</p>
+            <p className="font-semibold text-[20px]">
+              Make long-term contracts
+            </p>
             <br />
             <p>
               Forge connections and collaborations with key industry <br />{" "}
@@ -140,7 +169,9 @@ const Sponsorship = () => {
       {/* sponsors */}
 
       <div className=" max-w-7xl mx-auto mt-20 mb-20">
-        <h1 className="text-2xl lg:text-[48px] text-center text-[#234C81] font-semibold">Our Sponsors</h1>
+        <h1 className="text-2xl lg:text-[48px] text-center text-[#234C81] font-semibold">
+          Our Sponsors
+        </h1>
         <div className="flex justify-center">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10">
             <img
