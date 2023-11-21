@@ -1,17 +1,52 @@
 "use client";
 import React, { useState } from "react";
+import SpeakerModal from "../components/SpeakerModal";
+
+interface SpeakerModalState {
+  [key: number]: boolean;
+}
 
 const Speakers = () => {
   const [activeButton, setActiveButton] = useState("Day 1: July 4, 2024");
 
+  // const [showSpeakerModal, setShowSpeakerModal] = useState(false);
+  const [speakerModals, setSpeakerModals] = useState<SpeakerModalState>({});
+
+  const toggleModal = (speakerId: any) => {
+    setSpeakerModals((prevModals) => ({
+      ...prevModals,
+      [speakerId]: !prevModals[speakerId],
+    }));
+  };
+
   const speakers = [
     {
       id: 1,
-      name: "Dr. Bruce Wayne",
-      profileImage: "/assets/images/speakers/profileimage.png",
+      name: "Dr. Nikita Ysabelle Tobias",
+      profileImage: "/assets/images/speakers/profileimage1.png",
       location: "Hawaii Aesthetic Clinic",
-      position: "",
-      bio: "",
+      position: "President - Stark Medical Hospital",
+      bio: "Dr. Nikita Ysabelle Tobias is a distinguished aesthetic surgeon, renowned for her exceptional artistry and precision in cosmetic procedures. With a deep commitment to enhancing the natural beauty of her patients, Dr. Tobias combines the latest techniques and a keen eye for detail to achieve stunning, yet subtle, transformations. With a wealth of experience and a dedication to patient care, she is a trusted name in the field of aesthetic surgery, empowering individuals to look and feel their best. Dr. Tobias's unwavering passion for her craft and her patients makes her a sought-after professional for those seeking personalized and transformative cosmetic experiences.",
+      contributions: [
+        {
+          id: 1,
+          date: "Day 2: July 5, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            " Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+        {
+          id: 2,
+          date: "Day 3: July 6, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            "Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+      ],
     },
     {
       id: 2,
@@ -20,6 +55,26 @@ const Speakers = () => {
       location: "Hawaii Aesthetic Clinic",
       position: "",
       bio: "",
+      contributions: [
+        {
+          id: 1,
+          date: "Day 2: July 5, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            " Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+        {
+          id: 2,
+          date: "Day 3: July 6, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            "Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+      ],
     },
     {
       id: 3,
@@ -28,6 +83,26 @@ const Speakers = () => {
       location: "Hawaii Aesthetic Clinic",
       position: "",
       bio: "",
+      contributions: [
+        {
+          id: 1,
+          date: "Day 2: July 5, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            " Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+        {
+          id: 2,
+          date: "Day 3: July 6, 2024",
+          time: "10:15 AM - 11:00 AM",
+          title:
+            "Unlocking Innovations: The Future of Non-Invasive Aesthetic Procedures.",
+          content:
+            "Embark on a journey into the cutting-edge developments in non-invasive aesthetics.",
+        },
+      ],
     },
     // {
     //   id: 4,
@@ -112,18 +187,32 @@ const Speakers = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                       {speakers.map((speaker) => (
-                        <div className="flex space-x-5 items-center mt-5">
+                        <div
+                          key={speaker.id}
+                          className="flex  items-center mt-5"
+                        >
                           <img
-                            src="/assets/images/speakers/profileimage.png"
+                            className="object-contain h-[106px]"
+                            src={speaker.profileImage}
                             alt=""
                           />
-                          <div className="space-y-2">
+                          <div className="space-y-2 ml-5">
                             <p>{speaker.name}</p>
                             <p>{speaker.location}</p>
-                            <button className="border-2 border-[#234C81] text-[#234C81] font-semibold rounded-full px-4 py-2">
-                              VIEW SPEAKERS BIO
+                            <button
+                              onClick={() => toggleModal(speaker.id)}
+                              className="border-2 border-[#234C81] text-[#234C81] font-semibold rounded-full px-4 py-2"
+                            >
+                              VIEW SPEAKER'S BIO
                             </button>
                           </div>
+                          {speakerModals[speaker.id] && (
+                            <SpeakerModal
+                              speaker={speaker}
+                              isVisible={speakerModals[speaker.id]}
+                              onClose={() => toggleModal(speaker.id)}
+                            />
+                          )}
                         </div>
                       ))}
                     </div>
@@ -292,6 +381,33 @@ const Speakers = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </>
+        )}
+        {activeButton === "Day 3: July 6, 2024" && (
+          <>
+            <div className="text-[#234C81] text-center mt-20 space-y-3 ">
+              <h1 className="text-center text-3xl lg:text-5xl font-bold ">
+                Coming Soon
+              </h1>
+              <h2 className="text-[34px]">
+                Get ready for an illuminating experience! We're hard at work on
+                our program and speakers, and they're just around the corner.
+              </h2>
+            </div>
+          </>
+        )}
+
+        {activeButton === "Day 2: July 5, 2024" && (
+          <>
+            <div className="text-[#234C81] text-center mt-20 space-y-3 ">
+              <h1 className="text-center text-3xl lg:text-5xl font-bold ">
+                Coming Soon
+              </h1>
+              <h2 className="text-[34px]">
+                Get ready for an illuminating experience! We're hard at work on
+                our program and speakers, and they're just around the corner.
+              </h2>
             </div>
           </>
         )}
