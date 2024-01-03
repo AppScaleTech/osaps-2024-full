@@ -16,7 +16,7 @@ const Navbar = () => {
   
       <div>
         <ul className="lg:flex hidden text-white text-base space-x-10">
-            <li>Speakers</li>
+            <Link href={'/speakers'}>Speakers</Link>
             <li>Abstract</li>
             <Link href={'/sponsorship'}>Sponsors</Link>
             <Link href={'/explore-cebu'}>Explore Cebu</Link>
