@@ -7,9 +7,9 @@ const Navbar = () => {
     <nav className="bg-[#234C81] py-5 px-5 flex justify-between items-center">
         <Link href={'/'}>
         <Image
-        src={"/assets/images/logo.png"}
+        src={"/assets/images/osaps-logo.png"}
         alt="logo"
-        width={120}
+        width={250}
         height={40}
       />
         </Link>
